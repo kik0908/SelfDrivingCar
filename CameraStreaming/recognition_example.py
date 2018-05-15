@@ -1,5 +1,6 @@
 import numpy as np
 import cv2 as cv
+import pickle
 
 cap = cv.VideoCapture(0)
 
@@ -50,6 +51,8 @@ while(True):
                   identity_percent=identity_percent+1
          print (identity_percent)
 
+
+   print(pickle.dumps(frame, 2))
    cv.imshow('frame', frame)
 
    if cv.waitKey(1) & 0xFF == ord('q'):
